@@ -159,6 +159,128 @@ Now we will create a SSL/TLS Policy so that we could inspect the traffic Deeply.
 
 <img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/b774a332-63d1-45fd-80aa-9feafbcaea7e" />
 
+Task 5.3: Review Certificate Pinning Errors
+Certificate pinning is a client-side mechanism used to secure applications by verifying that the SSL certificate presented by
+a backend server matches a trusted certificate hardcoded into the application. While this approach helps protect against
+man-in-the-middle (MITM) attacks, it can also lead to SSL connection failures when the pinned certificate does not match
+intercepting proxies, such as Zscaler's SSL inspection certificates. In this task, you will learn two common methods to resolve
+certificate pinning errors in applications.
+
+here we will allow threema so Threema app will not work for full inspection. 
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/7a45ccb6-fab7-48e9-89a6-1d6e36af23bd" />
+
+Lab 6: Configure Content Filtering & Access Control
+Scenario: As the Zscaler administrator, your goal is to improve users' browsing experience by ensuring they only access safe
+and appropriate content. we will explore how Zscaler Internet Access (ZIA) enforces content filtering and access control to
+protect against threats such as phishing, malware, and data leakage. You will also verify existing threat protection
+configurations, analyze risk reports, and test policy behavior to assess how ZIA enforces organizational baselines for URL
+filtering, content categories, and cloud application controls.
+Objectives: By the end of this lab, we  will:
+
+Explore ZIA’s threat protection configurations and analyze risk reporting.
+Configure and validate a URL Filtering Policy to block risky websites (e.g.,gambling, adult, and shopping sites.
+Test the effect of URL Filtering control on end-user experience.
+Create and verify a Cloud App Control policy to allow access to specific apps (e.g., YouTube) while restricting others
+in the same category.
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/5a4ba1f6-8726-4708-a4b1-fdb42403058e" />
+
+Task 6.2: Configure Content Filtering Controls
+In this task, we will create a URL Filtering Policy to block risky URL categories such as gambling, adult content, and video
+streaming. we will also verify how content filtering controls work in ZIA to manage user access.
+
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/814c9228-96c5-4fb2-b8ee-22e1d8fd65c5" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/3a78113a-2ee5-4691-bf19-d516e1a49c10" />
+
+Task 6.4: Configure Cloud App Control
+The Cloud App Control Policy provides granular control over how users access specific cloud applications and websites. In
+this task, we will create a rule to allow access to YouTube while restricting other entertainment and recreation websites.
+
+Here we will allow youtube but restrict some features of it. 
+
+Lab 7: Configure DNS Security
+Scenario: Safemarch aims to protect its users by blocking access to malicious domains and enforcing acceptable use
+policies that prohibit access to gambling websites. As a Zscaler administrator, you will configure DNS security controls,
+enforce these policies, and validate them using the DNS Insight logs.
+Objectives: By the end of this lab, you will:
+Configure an App Profile to ensure that all DNS traffic flows through the Zero Trust Exchange.
+Create and test a DNS Control Policy to block gambling sites and ensure legitimate domains resolve correctly.
+Verify the DNS Control Policy enforcement using DNS Insight Logs to confirm that gambling-related DNS requests are
+being blocked.
+
+
+Now we will go to our windows forwarding profile and add " * " as DNS inclusion so that all the DNS requests go to ZScaler. 
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/cbf83996-b593-4a3e-b815-5d9951adfaf2" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/673e3845-2019-4caa-9ad4-0ca551a90144" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/2a233ec1-c7f3-453f-834c-f95140eda8db" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/ade01514-25f0-464e-b972-7d6f7f26c148" />
+
+
+Lab 8: Enforce Policy with Unified DLP across Multi-Channel
+Scenario: In this lab you will configure and test policies to protect sensitive data in motion and at rest, ensuring compliance
+with privacy regulations such as PCI-DSS (Payment Card Industry - Data Security Standard). Using Zscalers Unified DLP
+policies, you will secure multi-channel data by analyzing endpoint and SaaS application security logs
+Objectives: By the end of this lab you will:
+Verify and enable SSL/TLS inspection for data traffic visibility and control.
+Configure DLP Dictionaries, DLP Engines, and DLP Rules to detect and block sensitive data, such as credit card
+information.
+Test policy enforcement to validate that DLP rules block sensitive information in data transfers.
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/b53657ef-e2e0-4b0c-8f4d-21d8696f0264" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/92f1ae90-3562-4ad6-8a02-a33f7e94516a" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/42421b23-0dca-43fb-8b5b-37da2898c6b6" />
+
+Lab 9: Provision ZPA Infrastructure
+Scenario: Safemarch Corporation is preparing to launch internal applications and requires secure, policy-driven
+connectivity without exposing those applications to the internet. As a Zscaler administrator, you will deploy and provision
+ZPA App Connectors across data centers and cloud platforms. These App connectors provide encrypted connectivity
+through the Zero Trust Exchange (ZTE) while keeping internal apps protected.
+Objectives: By the end of this lab you will:
+Deploy and provision an App Connector using a provisioning key and certificate.
+Activate the App Connector, enabling secure communication with the ZPA infrastructure.
+Validate the connection and ensure the App Connector is functioning correctly.
+
+Now here we have Windows server which will basically connect to the on prem.
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/301633b9-847d-4a89-a05b-80798c9cef6a" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/dc4a587d-79c8-4f36-8a32-2e118987590f" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/a8ab3dbd-2a09-4df7-8d26-62c9ec5a82d5" />
+
+Now We will add app connector keys. 
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/a6b79ed7-3c3c-4df8-9790-3acb7ce34bcd" />
+
+now we will upload the txt file to the appconnector VM from our base VM windows server. using WINSCP. 
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/0ccc288f-9bb2-471c-a3ec-4c9edce38d0f" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
