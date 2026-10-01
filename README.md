@@ -95,6 +95,74 @@ The purpose of this is to forward all the traffic using ZScaler best practice fo
 
 <img width="2908" height="1532" alt="image" src="https://github.com/user-attachments/assets/a9e984f6-16b6-40da-9ab2-b39c3b0952d8" />
 
+Now we will use this forwarding profile in the policy
+
+ii. Rule Order: 1
+iii. Status: Enable
+iv. Forwarding Profile: select the HandsOnLab profile created earlier.
+v. Install Zscaler SSL Certificate: On
+vi. User Groups: Select All.
+
+<img width="2908" height="1532" alt="image" src="https://github.com/user-attachments/assets/68b726a1-a650-4f8f-ab5c-7d91fe7bc241" />
+
+Now we can see finally our client connector started working. 
+
+<img width="2908" height="1532" alt="image" src="https://github.com/user-attachments/assets/6f22c09e-6750-452e-bd79-a7d14bc53443" />
+
+<img width="2908" height="1532" alt="image" src="https://github.com/user-attachments/assets/9d970161-41a4-4aa5-9ae1-90a3cdd213a2" />
+
+Task 4.1: Test Non-Web Traffic with the Default Firewall Block
+With Z-Tunnel 2.0, all traffic for all ports and protocols is sent to Zscaler for inspection. In this task, we will generate non-web
+traffic from the Corp: Client PC to verify that it is blocked by the default Block/Drop rule.
+
+1. Verify the Default Firewall Policy:
+a. From the Experience Center Portal, go to Policies > Access Control > Firewall > Firewall Filtering Policy.
+b. Confirm the following:
+i. The Default Rule is set to Block/Drop.
+ii. There are no other rules that would allow non-web traffic (refer to the example image).
+
+ICMP and SSH traffic blocked in the previous task now needs to be permitted to pass. In this task, you will configure the
+firewall policies to allow this traffic.
+1. Create a Firewall Filtering Rule to allow ICMP and SSH:
+a. From the Experience Center Portal go to Policies > Access Control > Firewall > Firewall Filtering Policy.
+b. Click Add Firewall Filtering Rule.
+c. Configure the rule:
+i. Rule Order: 1
+ii. Rule Status: Enabled (default)
+iii. Rule Name: allow-outbound-icmp_ssh-student-any
+●
+[action]-[direction]-[services]-[source-scope]-[destination-scope]
+
+<img width="2908" height="1532" alt="image" src="https://github.com/user-attachments/assets/a64464d6-0505-48a1-b39d-300d8cb807b3" />
+
+Now we will block WhatsApp
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/be33d287-ab0b-44f4-ad3c-0cf171610ae3" />
+
+Lab 5: Configure SSL Inspection Policies
+Scenario: As the Zscaler administrator, we are tasked with enabling SSL/TLS inspection to monitor and enforce policies on
+users' encrypted web traffic. Since most modern threats are hidden within HTTPS traffic, enabling SSL inspection provides
+visibility into encrypted sessions and allows policies to be enforced effectively. We need to configure SSL inspection for all
+destinations and define exemptions for trusted or privacy sensitive categories.
+
+
+Objectives: By the end of this lab, we will:
+
+Enable and configure SSL inspection policies for all encrypted traffic.
+Verify Zscaler’s certificate installation on the Windows Corp: Client PC.
+Analyze and resolve certificate pinning errors.
+Analyze SSL inspection logs and identify inspection or bypass events.
+
+Now we will create a SSL/TLS Policy so that we could inspect the traffic Deeply. 
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/bb093352-27bd-4229-9eb6-58527fe3d4ee" />
+
+<img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/b774a332-63d1-45fd-80aa-9feafbcaea7e" />
+
+
+
+
+
 
 
 
