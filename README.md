@@ -265,6 +265,44 @@ now we will upload the txt file to the appconnector VM from our base VM windows 
 
 <img width="2908" height="1678" alt="image" src="https://github.com/user-attachments/assets/0ccc288f-9bb2-471c-a3ec-4c9edce38d0f" />
 
+<img width="2908" height="922" alt="image" src="https://github.com/user-attachments/assets/dd8ce981-801b-4008-8450-d85baacdf27a" />
+
+
+
+Lab 10: Add a Corporate Application
+Scenario: Safemarch Corporation needs secure, scalable access to multiple internal applications that share a common
+domain pattern. To simplify access management and enforce reliable Zero Trust policies, you will configure a wildcard
+application segment for general access and a dedicated application segment for more granular user and application
+access. You will also implement ICMP access for troubleshooting.
+Objectives: By the end of this lab, you will:
+
+Configure a wildcard application segment for internal applications (e.g., *.patraining.safemarch.com)
+Configure user-specific access to defined internal applications.
+Enable ICMP access for troubleshooting in the ZPA Admin Portal
+
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/e2d6c33e-4f78-483d-8d23-6e89b11760da" />
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/b47260dd-f845-4072-8a3d-5c5bee69126b" />
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/26c8d69a-97af-49d2-bcc6-f90cd6acedb0" />
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/444abc29-f935-413b-a22a-8001d7cfc031" />
+
+Then we will add an Access Policy
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/ac52a252-bc8a-42e0-98b8-ec248b79ccc7" />
+
+<img width="2908" height="1790" alt="image" src="https://github.com/user-attachments/assets/d122edd9-1f44-4901-886a-df43b0d7c92c" />
+
+Task 10.2: Configure User-Specific Access to an Intranet Application
+In this task, you will create a dedicated application segment to provide more granular access control that limits intranet
+access to the "Student" user.
+
+
+
+
+
 
 
 
